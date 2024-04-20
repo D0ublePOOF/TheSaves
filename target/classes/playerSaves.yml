@@ -1,0 +1,23 @@
+Players:
+  # 每当不存在于此文件中的玩家进入时，该文件中就会创建一个以玩家为名的“层”
+  # 如果你需要测试，可以把下面这行改成你的名字（需要严格大小写）
+  Example_Player_Name_MAKEITVERYLONGLOLLOLLOLLOL:
+    # 这一“层”代表存档名称
+    spawn:
+      # 存档的图标(数字ID或方块名称）
+      icon: GRASS
+      # 图标是否有附魔光效
+      enchanted: true
+      # 存档的简介
+      description:
+        - Example
+        - Example2
+      # 存档的位置(X,Y,Z,Yaw,Pitch,World)
+      location: 0.50000,5.00000,0.50000,-90.0,0.0,world
+    sky:
+      icon: STONE
+      enchanted: false
+      description:
+        - Example
+        - Example2
+      location: 500.50000,255.00000,500.50000,-90.0,0.0,world

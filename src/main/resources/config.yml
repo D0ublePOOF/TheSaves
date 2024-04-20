@@ -1,0 +1,45 @@
+### 存档部分 ###
+# 玩家是(true)否(false)需要站在地面才能存档
+Save_OnGround: true
+# 存档简介能够拥有的最大行数，必须为一个正整数，这个值不宜过大
+# 如果想要禁止玩家为存档添加简介，填写0或者false
+Save_Lore_Line_Limit: 3
+# 没有以下额外权限时，玩家不能进行存档，如果不需要，那么填入[]
+# 例子：Save_ExtraPermissions: []
+#      Save_ExtraPermissions:
+#        - example.permission1
+#        - example.permission2
+Save_ExtraPermissions: []
+# 有以下额外权限时，玩家不能进行存档
+Save_IllegalPermissions: []
+# 在以下世界中，玩家不能进行存档
+Save_IllegalWorlds: []
+# 完成存档后进行的操作
+# 操作有以下几种选择：
+# - tell 在聊天框向玩家展示内容
+# - title 在屏幕中心向玩家展示内容
+# - player-command 玩家自身执行指令（可以不带/）
+# - op-command 玩家以op权限自身执行指令（可以不带/）
+# - console-command 后台执行指令（可以不带/）
+Saved_Operations:
+  - tell &e存档完成，将您传送回主城...
+  - player-command spawn
+# 展示所有存档时菜单的行数（必须大于等于2，小于等于6，并且为一个正整数）
+GUI_Row: 4
+
+### 读档部分 ###
+# 玩家是(true)否(false)需要站在地面才能读取存档
+Load_OnGround: true
+# 没有以下额外权限时，玩家不能进行读档
+Load_ExtraPermissions: []
+# 有以下额外权限时，玩家不能进行读档
+Load_IllegalPermissions: []
+# 在以下世界中，玩家不能进行读档
+Load_IllegalWorlds: []
+# 读取存档后玩家是否无法移动一段时间（防卡高）
+# 如果是，填写一个正整数（单位：秒）
+# 如果否，填写0或者false
+Loaded_DontMove: 3
+# 读取存档后进行的操作
+Loaded_Operations:
+  - tell &e读档完毕
