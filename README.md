@@ -18,11 +18,11 @@
 ## 下载插件
 
 - 百度网盘:
-  - 链接: [https://pan.baidu.com/s/1xF_jdPr0-9qcatebo_SxCg](https://pan.baidu.com/s/1O8q4ZWcylpVbTfa6SUAdtw)
+  - 链接: [https://pan.baidu.com/s/1tFFuUhb3fnvkV4HuLF5U3Q](https://pan.baidu.com/s/1tFFuUhb3fnvkV4HuLF5U3Q)
   - 提取码: 1145
 - 蓝奏云:
-  - 链接: [https://wwl.lanzouq.com/iZhku1vtbhuf](https://wwug.lanzouq.com/iZSFx27uwy7i)
-  - 提取码: hmz8
+  - 链接: [https://wwug.lanzouq.com/ieWRX27uzdeh](https://wwug.lanzouq.com/ieWRX27uzdeh)
+  - 提取码: 3umw
 
 ## 更新日志
 - 2024/08/19：修复部分BUG
