@@ -12,7 +12,7 @@ Players:
       description:
         - Example
         - Example2
-      # 存档的位置(X,Y,Z,Yaw,Pitch,World)
+      # 记录的位置(X,Y,Z,Yaw,Pitch,World)
       location: 0.50000,5.00000,0.50000,-90.0,0.0,world
     sky:
       icon: STONE
