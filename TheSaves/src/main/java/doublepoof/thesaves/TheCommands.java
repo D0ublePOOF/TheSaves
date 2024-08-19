@@ -30,8 +30,19 @@ public class TheCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if(("reload".equalsIgnoreCase(args[0]) || "rl".equalsIgnoreCase(args[0])) && args.length == 1) {
+            if(!sender.hasPermission("TheSaves.admin")) {
+                sender.sendMessage("§4[§c!§4] §c你没有权限");
+                return false;
+            }
+
+            getInstance().reload();
+            sender.sendMessage("§2[§a√§2] §a已重载TheSaves插件");
+            return true;
+        }
+
         if(!(sender instanceof Player)) {
-            sender.sendMessage("§4[§c!§4] §c无法在控制台使用TheSaves插件的命令！");
+            sender.sendMessage("§4[§c!§4] §c无法在控制台使用TheSaves插件除了/ts reload之外的命令！");
             return false;
         }
 
@@ -73,14 +84,6 @@ public class TheCommands implements CommandExecutor {
                     }
 
                     sendHelpInfo(player);
-                } else if("reload".equalsIgnoreCase(args[0]) || "rl".equalsIgnoreCase(args[0])) {
-                    if(!hasAdminPermission && !player.hasPermission("TheSaves.reload")) {
-                        sendNoPermissionMessage(player);
-                        return false;
-                    }
-
-                    getInstance().reload();
-                    player.sendMessage("§2[§a√§2] §a已重载TheSaves插件");
                 } else {
                     handleWrongCommand(player);
                     return false;
