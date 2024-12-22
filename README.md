@@ -17,14 +17,10 @@
 
 ## 下载插件
 
-- 百度网盘:
-  - 链接: [https://pan.baidu.com/s/1tFFuUhb3fnvkV4HuLF5U3Q](https://pan.baidu.com/s/1tFFuUhb3fnvkV4HuLF5U3Q)
-  - 提取码: 1145
-- 蓝奏云:
-  - 链接: [https://wwug.lanzouq.com/ieWRX27uzdeh](https://wwug.lanzouq.com/ieWRX27uzdeh)
-  - 提取码: 3umw
+- 进入target文件夹，点击TheSaves-1.0.jar下载
 
 ## 更新日志
+- 2024/12/23：优化部分代码
 - 2024/08/19：修复部分BUG
 - 2024/04/20：正式发布
 
