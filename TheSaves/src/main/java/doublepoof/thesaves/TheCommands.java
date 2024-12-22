@@ -30,17 +30,6 @@ public class TheCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(("reload".equalsIgnoreCase(args[0]) || "rl".equalsIgnoreCase(args[0])) && args.length == 1) {
-            if(!sender.hasPermission("TheSaves.admin")) {
-                sender.sendMessage("§4[§c!§4] §c你没有权限");
-                return false;
-            }
-
-            getInstance().reload();
-            sender.sendMessage("§2[§a√§2] §a已重载TheSaves插件");
-            return true;
-        }
-
         if(!(sender instanceof Player)) {
             sender.sendMessage("§4[§c!§4] §c无法在控制台使用TheSaves插件除了/ts reload之外的命令！");
             return false;
@@ -58,7 +47,16 @@ public class TheCommands implements CommandExecutor {
 
         switch(args.length) {
             case 1: {
-                if("list".equalsIgnoreCase(args[0])) {
+                if(("reload".equalsIgnoreCase(args[0]) || "rl".equalsIgnoreCase(args[0])) && args.length == 1) {
+                    if(!sender.hasPermission("TheSaves.admin")) {
+                        sender.sendMessage("§4[§c!§4] §c你没有权限");
+                        return false;
+                    }
+
+                    getInstance().reload();
+                    sender.sendMessage("§2[§a√§2] §a已重载TheSaves插件");
+                    return true;
+                } else if("list".equalsIgnoreCase(args[0])) {
                     if(!hasPlayerPermission && !hasAdminPermission && !player.hasPermission("TheSaves.list")) {
                         sendNoPermissionMessage(player);
                         return false;
@@ -146,13 +144,13 @@ public class TheCommands implements CommandExecutor {
                     return false;
                 }
 
-                for(String s : Permissions.save_ilPermissions) {
+                for(String s : Permissions.save_exPermissions) {
                     if(!player.hasPermission(s)) {
                         player.sendMessage("§4[§c!§4] §c你需要" + s + "权限才能进行" + action);
                         return false;
                     }
                 }
-                for(String s : Permissions.save_exPermissions) {
+                for(String s : Permissions.save_ilPermissions) {
                     if(player.hasPermission(s)) {
                         player.sendMessage("§4[§c!§4] §c你拥有" + s + "权限，不能进行" + action);
                         return false;
